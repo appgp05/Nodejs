@@ -1,0 +1,27 @@
+app.controller.ts   -->   Es el archivo para meter los get, put, post, etc
+
+ctrl + espacio   -->   Mostrar opciones a completar
+
+
+
+
+
+
+
+
+
+
+
+
+node --
+node --version
+
+npm i -g @nestjs/cli
+
+nest --help
+
+nest new nest001           *SELECCIONAS LA OPCION: [NPM]*
+
+cd nest001
+
+npm run start:dev
