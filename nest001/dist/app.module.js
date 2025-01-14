@@ -14,13 +14,15 @@ const products_controller_1 = require("./controllers/products/products.controlle
 const categories_controller_1 = require("./controllers/categories/categories.controller");
 const brands_controller_1 = require("./controllers/brands/brands.controller");
 const canciones_controller_1 = require("./controllers/canciones/canciones.controller");
+const common_controller_1 = require("./controllers/common/common.controller");
+const threads_controller_1 = require("./controllers/threads/threads.controller");
 let AppModule = class AppModule {
 };
 exports.AppModule = AppModule;
 exports.AppModule = AppModule = __decorate([
     (0, common_1.Module)({
         imports: [],
-        controllers: [app_controller_1.AppController, products_controller_1.ProductsController, categories_controller_1.CategoriesController, brands_controller_1.BrandsController, canciones_controller_1.CancionesController],
+        controllers: [app_controller_1.AppController, products_controller_1.ProductsController, categories_controller_1.CategoriesController, brands_controller_1.BrandsController, canciones_controller_1.CancionesController, common_controller_1.CommonController, threads_controller_1.ThreadsController],
         providers: [app_service_1.AppService],
     })
 ], AppModule);
