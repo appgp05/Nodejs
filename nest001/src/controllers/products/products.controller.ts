@@ -1,4 +1,4 @@
-import { Controller, Get, Param, Query } from '@nestjs/common';
+import { Body, Controller, Get, Param, Post, Put, Query } from '@nestjs/common';
 
 @Controller('products')
 export class ProductsController {
@@ -18,6 +18,20 @@ export class ProductsController {
     @Query('brand') brand: string,
   ) {
     return `products limit=> ${limit}`;
+  }
+  @Post()
+    create(@Body() payload) {
+      return {
+        message: 'acción de crear',
+        payload: { name :payload.name, price: payload.price }
+      };
+    }
+  @Put(':id')
+  update(@Param('id') id: number, @Body() payload: any) {
+    return {
+      id,
+      payload,
+    };
   }
 }
 
