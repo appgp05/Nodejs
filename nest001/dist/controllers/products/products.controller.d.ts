@@ -1,15 +1,12 @@
+import { CreateProductDto, UpdateProductDto } from 'src/dtos/products.dtos';
+import { ProductsService } from 'src/services/products/products.service';
 export declare class ProductsController {
-    getProduct(productId: string): string;
+    private productService;
+    constructor(productService: ProductsService);
+    getProducts(): Promise<import("../../typescript/pelicula").Pelicula[]>;
+    getProductss(nombre: any): Promise<import("../../typescript/pelicula").Pelicula[]>;
     getProducts2(limit: number, offset: number, brand: string): string;
-    create(payload: any): {
-        message: string;
-        payload: {
-            name: any;
-            price: any;
-        };
-    };
-    update(id: number, payload: any): {
-        id: number;
-        payload: any;
-    };
+    getProduct(productId: String): import("../../typescript/pelicula").Pelicula;
+    create(newProduct: CreateProductDto): any;
+    update(id: number, payload: UpdateProductDto): string;
 }
